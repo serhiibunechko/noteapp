@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block title %}
+All notes
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h3>All added notes</h3>
+
+    {% if messages|length > 0 %}
+        {% for note in messages %}
+            <div class="alert alert-success">
+            <h5>{{ note.heading }}</h5>
+            <p>{{ note.note }}</p>
+            <p><b>{{ note.date.date() }}</b></p>
+            <a class="btn btn-warning" href="/notes/{{ note.id }}">More</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>No one notes add yet</p>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Updating note
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>Update notes</h1>
+<form method="post">
+    <input type="text" name="heading" id="heading" class="form-control" value="{{ message.heading }}" placeholder="Enter caption of your post"><br>
+    <textarea name="note" id="note" class="form-control" placeholder="Enter main text">{{ message.note }}</textarea><br>
+    <input type="submit" class="btn btn-success" value="Update note">
+</form>
+</div>
+{% endblock %}

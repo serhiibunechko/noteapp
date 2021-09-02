@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block title %}
+New note
+{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+<h2>Create new note</h2>
+<form method="post">
+    <input type="text" name="heading" id="heading" class="form-control" placeholder="Enter caption of your note"/><br>
+    <textarea name="note" id="note" class="form-control" placeholder="Enter main text"></textarea><br>
+    <input type="submit" class="btn btn-success" value="Add note">
+</form>
+</div>
+{% endblock %}
